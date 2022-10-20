@@ -1,0 +1,16 @@
+extends layout.pug
+
+block title
+    title= name || "Internal Server Error"
+
+block content
+    h2(style="font-size: 80px;text-align:center;margin-bottom: 0")= code || 500
+    h3(style="font-size: 20px;text-align:center")= name || "Internal Server Error"
+    
+    if code && code >= 500
+        p(style="text-align: center")= message || "Please try again later"
+
+    if stack
+        pre(style="white-space:pre-wrap;overflow:auto;font-size:90%;word-break:break-all;margin: 1rem auto")= stack
+
+block navigation

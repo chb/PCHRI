@@ -1,0 +1,43 @@
+doctype html
+html(lang="en")
+  head
+    block title
+      title= title
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    block description
+      meta(name="description", content= pageDescription)
+    block styles
+      link(rel="stylesheet", href="/css/cms_style.css")
+
+  body
+    a(name="top")
+    #iecontainer
+      #main
+        block main-header
+          #header
+            header#banner
+              .title
+                span.brand-1 PCHRI
+              .sub-title
+                span The Harvard Medical School Meeting on Personally Controlled Health Record Infrastructure
+        #content
+          block navigation
+          #maincontent
+            block content
+      
+        #footer
+            #logos
+              a(href="http://hms.harvard.edu/")
+                img(src="/img/logo_hms.png" alt="Harvard Medical School")
+              a(href="http://www.countway.harvard.edu/")
+                img(src="/img/logo_countway.png", alt="Countway Library of Medicine")
+              br
+              br
+              a.no-print(href="#top") Back to top
+              br
+              br
+              div Copyright &copy; The President and Fellows of Harvard College 2020.
+              div All rights reserved.
+    
+
+    block scripts

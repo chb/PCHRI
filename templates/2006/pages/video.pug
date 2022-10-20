@@ -1,0 +1,42 @@
+extends ../layout.pug
+
+block title
+    title.
+        PCHRI 2006 | Meeting Videos
+
+mixin video(filename, title)
+    a.thumbnail(href="/video/" + filename + ".mp4" alt=title)
+        img(src="/video/" + filename + ".jpeg" title=title)
+        h4=title
+
+block content
+    .padding
+
+        h1 Meeting Videos
+
+        section
+            ul.sectionlist
+                li
+                    a(href="#top") Keynotes
+                li
+                    a(href="#content16") Panels
+                li
+                    a(href="#content17") CBMI Award for PCHR Innovation
+        
+        section
+            a(name="content15"): h2 Keynotes
+
+            +video("j.halamka-10-10-2006", "Meeting Introduction, John Halamka")
+            +video("", "Introduction to Mitchell Kapor")
+            +video("m.kapor-10-11-2006", "Mitchell Kapor")
+
+        section
+            a(name="content16"): h2 Panels
+
+            +video("pchr_in_clinical_care-10-10-2006", "Personally Controlled Health Records in Clinical Care")
+            +video("pchrs_and_population_health-10-10-2006", "PCHRs and Population Health")
+
+        section
+            a(name="content17"): h2 CBMI Award for PCHR Innovation
+            
+            +video("", "Presentation to Professor Pete Szolovits")
