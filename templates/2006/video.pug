@@ -1,12 +1,12 @@
-extends ../layout.pug
+extends layout.pug
 
 block title
     title.
         PCHRI 2006 | Meeting Videos
 
 mixin video(filename, title)
-    a.thumbnail(href="/video/" + filename + ".mp4" alt=title)
-        img(src="/video/" + filename + ".jpeg" title=title)
+    a.thumbnail(href="../video/" + filename + ".mp4" alt=title)
+        img(src="../video/" + filename + ".jpeg" title=title)
         h4=title
 
 block content

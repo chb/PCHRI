@@ -10,7 +10,7 @@ app.enable("view cache");
 
 app.get("/favicon.ico", (req, res) => res.status(404).end());
 
-app.get("/", (req, res) => res.redirect("/2007/"));
+// app.get("/", (req, res) => res.redirect("/2007/"));
 
 app.use(express.static("static", { extensions: ["html"] }));
 

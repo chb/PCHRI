@@ -3,6 +3,9 @@ extends layout.pug
 block title
     title PCHRI 2007 | The Harvard Medical School Meeting on Personally Controlled Health Record Infrastructure
 
+block styles
+    link(rel="stylesheet", href="./css/cms_style.css")
+
 block content
     .padding
         a(name="top")
@@ -33,3 +36,29 @@ block content
         p.
             The 2007 invitation-only PCHRI Meeting will take place on November 27th and 28th, 2007, at
             Harvard Medical School's Countway Library of Medicine.
+
+block main-header
+  #header
+    header#banner
+      .title
+        span.brand-1 PCHRI
+        span.brand-2 2007
+      .sub-title
+        span The Harvard Medical School Meeting on Personally Controlled Health Record Infrastructure
+
+block navigation
+  #navigation.no-print
+    #menu
+      a(href="2007"): .menuitem Home
+      a(href="2006"): .menuitem PCHRI 2006
+      a(href="2007/agenda"): .menuitem Agenda
+      a(href="2007/video"): .menuitem Videos
+      a(href="2007/organizers"): .menuitem Organizers
+      a(href="2007/sponsors"): .menuitem Sponsors
+
+block footer-logos
+    a(href="http://hms.harvard.edu/")
+        img(src="./img/logo_hms.png" alt="Harvard Medical School")
+    a(href="http://www.countway.harvard.edu/")
+        img(src="./img/logo_countway.png", alt="Countway Library of Medicine")
+    br

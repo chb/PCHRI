@@ -7,7 +7,7 @@ html(lang="en")
     block description
       meta(name="description", content= pageDescription)
     block styles
-      link(rel="stylesheet", href="/css/cms_style.css")
+      link(rel="stylesheet", href="../css/cms_style.css")
 
   body
     a(name="top")
@@ -27,11 +27,12 @@ html(lang="en")
       
         #footer
             #logos
-              a(href="http://hms.harvard.edu/")
-                img(src="/img/logo_hms.png" alt="Harvard Medical School")
-              a(href="http://www.countway.harvard.edu/")
-                img(src="/img/logo_countway.png", alt="Countway Library of Medicine")
-              br
+              block footer-logos
+                a(href="http://hms.harvard.edu/")
+                    img(src="../img/logo_hms.png" alt="Harvard Medical School")
+                a(href="http://www.countway.harvard.edu/")
+                    img(src="../img/logo_countway.png", alt="Countway Library of Medicine")
+                br
               br
               a.no-print(href="#top") Back to top
               br
