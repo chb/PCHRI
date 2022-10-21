@@ -27,9 +27,13 @@ hr {
 
 div.album {
 	padding:5px;
-	border:1px solid black;
-	margin:10px;
+	/* border:1px solid black; */
+	/* margin:10px; */
 	float:left;
+}
+
+div.album img {
+	display: block;
 }
 
 a {
