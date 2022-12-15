@@ -186,26 +186,27 @@ a:hover div.menuitem {
 	margin: auto;
 }
 
-.thumbnail {
+figure.video {
 	display: inline-block;
-	margin: 5px;
-	text-decoration: none;
-	vertical-align: top;
+	margin: 0;
+	padding: 0 0 3em;
+	width: 49%;
 	text-align: center;
-	width: 200px;
+	min-width: 250px;
+	vertical-align: top;
 }
 
-.thumbnail img {
-	display: block;
-	width: 200px;
-	height: 150px;
-	border: 1px solid #333;
-	box-sizing: border-box;
+figure.video iframe {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 4/3;
 }
-.thumbnail h4 {
-	font-size: 15px;
-	font-weight: 300;
-	margin-top: 5px;
+
+
+@media (max-width: 860px) {
+	figure.video {
+		width: 100%;
+	}
 }
 
 @media print {
